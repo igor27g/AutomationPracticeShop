@@ -1,4 +1,6 @@
 package Drivers;
 
-public class Browser {
+public enum  Browser {
+    CHROME,
+    FIREFOX
 }
