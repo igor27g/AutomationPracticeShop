@@ -5,22 +5,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AddressPage extends BasePage {
+public class ShippingPage extends BasePage {
     private WebDriverWait wait;
 
-    By proccedButton = By.cssSelector("button[name='processAddress']");
+    By proccedButton = By.cssSelector("button[name='processCarrier']");
+    By terms = By.cssSelector("div#uniform-cgv");
 
-
-    public AddressPage(WebDriver driver) {
+    public ShippingPage(WebDriver driver) {
         super(driver);
         wait = new WebDriverWait(driver, 15);
     }
 
-    public ShippingPage buttonProccedClick() {
+    public PaymentMethodPage AcceptTermsAndButtonProccedClick() {
+        wait.until(ExpectedConditions.elementToBeClickable(terms)).click();
         wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
-        return new ShippingPage(driver);
+        return new PaymentMethodPage(driver);
     }
-
 
 
 }

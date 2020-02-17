@@ -3,6 +3,8 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
@@ -17,8 +19,9 @@ public class CreateAccountPage extends BasePage {
     By customerLastNameAddressInput = By.cssSelector("input[id='lastname']");
     By customerAddressInput = By.cssSelector("input[id='address1']");
     By customerCityInput = By.cssSelector("input[id='city']");
+
     //State dropdown
-    By customerPostalCodeInput = By.cssSelector("input[id='postCode']");
+    By customerPostalCodeInput = By.cssSelector("input[id='postcode']");
     //country dropdown
     By customerMobilePhoneInput = By.cssSelector("input[id='phone_mobile']");
     By customerFutureReferenceInput = By.cssSelector("input[id='alias']");
@@ -43,13 +46,14 @@ public class CreateAccountPage extends BasePage {
 
     public AddressPage newAccount(String firstName, String lastName, String password, String address, String city,
                                                      String postalCode, String mobilePhone, String futureReference) {
-        driver.findElement(customerFirstNameInput).sendKeys(firstName);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(customerFirstNameInput)).sendKeys(firstName);
         driver.findElement(customerLastNameInput).sendKeys(lastName);
         driver.findElement(customerPasswordInput).sendKeys(password);
         driver.findElement(customerFirstNameAddressInput).sendKeys(firstName);
         driver.findElement(customerLastNameAddressInput).sendKeys(lastName);
         driver.findElement(customerAddressInput).sendKeys(address);
         driver.findElement(customerCityInput).sendKeys(city);
+        new Select(driver.findElement(By.id("id_state"))).selectByVisibleText("Arizona");
         driver.findElement(customerPostalCodeInput).sendKeys(postalCode);
         driver.findElement(customerMobilePhoneInput).sendKeys(mobilePhone);
         driver.findElement(customerFutureReferenceInput).sendKeys(futureReference);

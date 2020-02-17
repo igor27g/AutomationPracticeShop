@@ -30,7 +30,7 @@ public class BaseTest {
     public void testSetUp() {
         DriverFactory driverFactory = new DriverFactory();
         driver = driverFactory.create(configuration);
-        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 

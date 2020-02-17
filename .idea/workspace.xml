@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c211c45-62ae-48f3-b8db-28d775ac9978" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AuthenticationPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/PaymentSummaryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/ShippingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/HomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/HomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/SummaryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/SummaryPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/HomeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/HomeTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,17 +33,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Tests/HomeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="208">
+              <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ConfigurationReader.java">
+        <entry file="jar://D:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="298">
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -43,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -52,62 +60,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/SearchResults.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="36" />
+            <state relative-caret-position="310">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/AuthenticationPage.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ShippingPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+            <state relative-caret-position="238">
+              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PaymentSummaryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="259">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="289">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="15" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="221">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -133,19 +141,24 @@
         <option value="$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/configs/Configuration.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PageObjects/SearchResults.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/CartPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/ProductPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Tests/HomeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/AuthenticationPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java" />
+        <option value="$PROJECT_DIR$/src/configs/Configuration.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/PaymentPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/ShippingPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/PaymentSummaryPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/SearchResults.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Tests/HomeTest.java" />
       </list>
     </option>
   </component>
@@ -253,7 +266,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581959800941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581978442235" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
@@ -281,6 +294,25 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.HomeTest.buyProductUsingSearchWithoutAccount">
+    <configuration name="HomeTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomationPracticeShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.HomeTest" />
+      <option name="METHOD_NAME" value="buyProductUsingSearchWithoutAccount" />
+      <option name="TEST_OBJECT" value="uniqueId" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:Tests.HomeTest]" />
+      </uniqueIds>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutomationPracticeShop" />
       <extension name="coverage">
@@ -330,6 +362,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.HomeTest.buyProductUsingSearchWithoutAccount" />
+        <item itemvalue="JUnit.HomeTest (1)" />
         <item itemvalue="JUnit.HomeTest.firstTest" />
         <item itemvalue="JUnit.HomeTest" />
       </list>
@@ -349,34 +382,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HomeTest_firstTest - 2020.02.17 at 12h 36m 50s.xml">
-      <configuration name="HomeTest.firstTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeTest_firstTest - 2020.02.17 at 12h 37m 47s.xml">
-      <configuration name="HomeTest.firstTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 24m 29s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 18h 51m 01s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 25m 28s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 18h 52m 01s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 25m 44s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 18h 57m 39s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 26m 33s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 19h 49m 22s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 27m 14s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 19h 53m 45s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 29m 37s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 19h 58m 45s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 31m 32s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 20h 55m 05s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 13h 33m 01s.xml">
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 20h 56m 40s.xml">
+      <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 20h 59m 35s.xml">
+      <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HomeTest_buyProductUsingSearchWithoutAccount - 2020.02.17 at 21h 00m 24s.xml">
       <configuration name="HomeTest.buyProductUsingSearchWithoutAccount" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -403,15 +436,15 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3022599" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3537415" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3516949" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32944608" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
       <window_info anchor="bottom" id="SonarLint" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32555878" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32485875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -427,15 +460,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Tests/HomeTest.java</url>
-          <line>22</line>
+          <line>35</line>
           <properties />
-          <option name="timeStamp" value="20" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java</url>
           <line>19</line>
           <properties />
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/ShippingPage.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/ShippingPage.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -466,31 +517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/configs/Configuration.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ProductPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -508,38 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -550,24 +552,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/AddressPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/AuthenticationPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configs/Configuration.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CreateAccountPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ShippingPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/SummaryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PaymentMethodPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/PaymentSummaryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/SearchResults.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="310">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/TestDataReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/HomeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+        <state relative-caret-position="208">
+          <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
         </state>
       </provider>
     </entry>
