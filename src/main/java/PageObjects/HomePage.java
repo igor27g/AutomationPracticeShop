@@ -20,10 +20,10 @@ public class HomePage extends BasePage {
         return new HomePage(driver);
     }
 
-    public HomePage findProductInSearch(String productName){
+    public SearchResults findProductInSearch(String productName){
         driver.findElement(searchInput).sendKeys(productName);
         driver.findElement(searchSubmit).click();
-        return this;
+        return new SearchResults(driver);
     }
 
 

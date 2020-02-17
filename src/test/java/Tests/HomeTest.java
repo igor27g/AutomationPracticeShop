@@ -10,8 +10,9 @@ public class HomeTest extends BaseTest {
 
     @Test
     public void firstTest(){
-        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl())
-                .findProductInSearch(productName);
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
+        homePage.findProductInSearch(productName).chooseProductFromSearchResult();
+
 
 
 
