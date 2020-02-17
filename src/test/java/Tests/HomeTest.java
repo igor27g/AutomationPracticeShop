@@ -13,7 +13,11 @@ public class HomeTest extends BaseTest {
     @Test
     public void buyProductUsingSearchWithoutAccount(){
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        homePage.findProductInSearch(productName).chooseProductFromSearchResult().addProductToCartAndConfirm().confirmSummary();
+        homePage.findProductInSearch(productName).chooseProductFromSearchResult().addProductToCartAndConfirm().confirmSummary()
+        .createNewEmail("xyz12351@ovh.pl")
+                .chooseTitle()
+                .newAccount("Tom", "Kowalski", "password","Streei 11"
+                        , "New York","12345","123456789");
 
 
 

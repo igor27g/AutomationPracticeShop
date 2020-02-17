@@ -16,9 +16,9 @@ public class SummaryPage extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-    public SummaryPage confirmSummary() {
+    public AuthenticationPage confirmSummary() {
         wait.until(ExpectedConditions.elementToBeClickable(confirmButton)).click();
-        return this;
+        return new AuthenticationPage(driver);
     }
 
     public String howManyProductsContainsCart() {
