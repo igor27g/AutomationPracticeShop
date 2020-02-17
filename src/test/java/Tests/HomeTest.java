@@ -11,16 +11,20 @@ public class HomeTest extends BaseTest {
     @Test
     public void firstTest(){
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        homePage.findProductInSearch(productName).chooseProductFromSearchResult();
+        homePage.findProductInSearch(productName).chooseProductFromSearchResult().addProductToCart();
 
 
 
 
         //write name product in search OK
         // click icon search OK
-        // go to results Page
-        // open product info
-        // add to cart
+        // go to resultsPage OK
+        // open product info OK
+        // add to cart OK
+        // confirm adding to cart OK
+        // go to summaryPage OK
+        // check order in summary
+        //
     }
 
 }
