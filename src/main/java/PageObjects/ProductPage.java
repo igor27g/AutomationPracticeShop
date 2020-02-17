@@ -20,7 +20,6 @@ public class ProductPage extends BasePage {
 
     public SummaryPage addProductToCartAndConfirm() {
         wait.until(ExpectedConditions.elementToBeClickable(buttonAddToCart)).click();
-        
         wait.until(ExpectedConditions.visibilityOfElementLocated(moduleInfo));
         wait.until(ExpectedConditions.elementToBeClickable(proccedCheckOutButton)).click();
         return new SummaryPage(driver);
