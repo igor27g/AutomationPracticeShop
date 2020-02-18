@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c211c45-62ae-48f3-b8db-28d775ac9978" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationCompletePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/SearchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/PageObjects/OrderConfirmationCompletePage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/META-INF/AutomationPracticeShop.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/Tests/SearchTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/OrderConfirmationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/SearchResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/SearchResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/HomeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Drivers/Browser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Drivers/Browser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Drivers/DriverFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/AddressPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/AddressPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/AuthenticationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/AuthenticationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/CreateAccountPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/CreateAccountPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/OrderConfirmationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/OrderConfirmationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/PaymentMethodPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/PaymentMethodPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/PaymentSummaryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/PaymentSummaryPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/SearchResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/SearchResults.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/ShippingPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/ShippingPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/ShoppingCartSummary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/ShoppingCartSummary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/ConfigurationReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/ConfigurationReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/FileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/TestDataReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/TestDataReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/HomeTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -288,7 +260,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582033603625" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582033657240" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
