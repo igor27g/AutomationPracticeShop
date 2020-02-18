@@ -18,11 +18,11 @@ public class ProductPage extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-    public SummaryPage addProductToCartAndConfirm() {
+    public ShoppingCartSummary addProductToCartAndConfirm() {
         wait.until(ExpectedConditions.elementToBeClickable(buttonAddToCart)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(moduleInfo));
         wait.until(ExpectedConditions.elementToBeClickable(proccedCheckOutButton)).click();
-        return new SummaryPage(driver);
+        return new ShoppingCartSummary(driver);
     }
 
 }
