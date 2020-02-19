@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
     By searchInput = By.cssSelector("input[id='search_query_top']");
     By searchSubmit = By.cssSelector("button[name='submit_search']");
     By frameLocator = By.cssSelector("iframe[class='fancybox-iframe']");
+    By iconPlusQuantity = By.cssSelector("i[class='icon-plus']");
     By addToCartButton = By.cssSelector("button[class='exclusive']>span");
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
 
@@ -39,13 +40,28 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    //Refactor tych metod
+
     public ShoppingCartSummary clickAddToCartButton() {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
-        wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(proccedToCheckoutButton)).click();
-
+        clickAddToCart2();
         return new ShoppingCartSummary(driver);
     }
+
+    public ShoppingCartSummary addOneMoreProductAndAddToCartButton() {
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
+        wait.until(ExpectedConditions.elementToBeClickable(iconPlusQuantity)).click();
+        clickAddToCart2();
+        return new ShoppingCartSummary(driver);
+    }
+
+    private void clickAddToCart2() {
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(proccedToCheckoutButton)).click();
+    }
+
+
+
 
 
 }

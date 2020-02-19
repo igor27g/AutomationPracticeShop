@@ -18,7 +18,7 @@ public class SearchTest extends BaseTest {
     @Test
     public void addOneProductToCartAndCreatneNewAccount() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addToCartAndConfirm();
+        ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addToCartAndConfirmProduct();
         int productsAmount = shoppingCartSummary.howManyProductsContainsCart();
 
         OrderConfirmationPage orderConfirmationPage = shoppingCartSummary.confirmSummary()

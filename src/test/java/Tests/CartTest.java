@@ -28,6 +28,21 @@ public class CartTest extends BaseTest {
     }
 
     @Test
+    public void addTwoProductAndLoginUser() {
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().addOneMoreProductAndAddToCartButton()
+                .confirmSummary()
+                .logIn(email, password)
+                .buttonProccedClick()
+                .AcceptTermsAndButtonProccedClick()
+                .payByBankWire()
+                .confirmMyOrder();
+        Assertions.assertAll("Checking order summary",
+                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+        );
+    }
+
+    @Test
     public void addOneProductAndNotAcceptTerms() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShippingPage shippingPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
@@ -39,5 +54,8 @@ public class CartTest extends BaseTest {
                         , shippingPage.getTextAlert(), "Wrong text alert")
         );
     }
+
+
+
 
 }
