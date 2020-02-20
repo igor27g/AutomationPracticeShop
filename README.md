@@ -7,7 +7,6 @@ AutomationPracticeShop
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Status](#status)
-* [Inspiration](#inspiration)
 
 ## General info
 There is a fake-store website for training automation tests. My goal is building a framework using Java and Selenium WebDriver. Besides, I use Page Object Model. Each page has a class in the PageObjects folder. Also, I use Selenium Grid to configure browsers version and their instances.
