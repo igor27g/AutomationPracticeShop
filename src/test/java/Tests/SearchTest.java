@@ -9,16 +9,16 @@ import java.util.Random;
 public class SearchTest extends BaseTest {
 
 
-    private String productName = "T-shirt";
-    private String wrongNameProduct = "abada";
+    private String productName = "Blouse";
+    private String wrongNameProduct = "wrongNameProduct";
 
     Random rand = new Random();
 
 
     @Test
-    public void buyProductAndCreatneNewAccount() {
+    public void addOneProductToCartAndCreatneNewAccount() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addProductToCartAndConfirm();
+        ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addToCartAndConfirmProduct();
         int productsAmount = shoppingCartSummary.howManyProductsContainsCart();
 
         OrderConfirmationPage orderConfirmationPage = shoppingCartSummary.confirmSummary()
@@ -32,7 +32,7 @@ public class SearchTest extends BaseTest {
                 .confirmMyOrder();
 
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(18.51, orderConfirmationPage.getTotalAmount(), "Total amount is wrong"),
+                () -> Assertions.assertEquals(29.0, orderConfirmationPage.getTotalAmount(), "Total amount is wrong"),
                 () -> Assertions.assertEquals(1, productsAmount, "Wrong amount product in cart")
         );
     }
@@ -41,7 +41,7 @@ public class SearchTest extends BaseTest {
     public void findProductWithWrongName() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         SearchResults searchResults = homePage.findProductInSearch(wrongNameProduct);
-        Assertions.assertEquals("No results were found for your search \"abada\"", searchResults.getTextFromAlert());
+        Assertions.assertEquals("No results were found for your search "  + "\"" + wrongNameProduct + "\"" , searchResults.getTextFromAlert());
     }
 
 }

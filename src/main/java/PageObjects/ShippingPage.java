@@ -9,7 +9,8 @@ public class ShippingPage extends BasePage {
     private WebDriverWait wait;
 
     By proccedButton = By.cssSelector("button[name='processCarrier']");
-    By terms = By.cssSelector("div#uniform-cgv");
+    By terms = By.cssSelector("div[id='uniform-cgv']");
+    By errorAlert = By.cssSelector("p[class='fancybox-error']");
 
     public ShippingPage(WebDriver driver) {
         super(driver);
@@ -22,5 +23,14 @@ public class ShippingPage extends BasePage {
         return new PaymentMethodPage(driver);
     }
 
+    public ShippingPage NotAcceptTermsAndButtonProccedClick() {
+        wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
+        return this;
+    }
+
+    public String  getTextAlert() {
+        String errorAlertText = wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert)).getText();
+        return errorAlertText;
+    }
 
 }
