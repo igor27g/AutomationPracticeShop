@@ -28,7 +28,8 @@ There is a fake-store website for training automation tests. My goal is building
 
 ## Code Examples
  @Test
-    public void addOneProductAndNotAcceptTerms() {
+    public void addOneProductAndNotAcceptTerms() 
+    {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShippingPage shippingPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
                 .logIn(email, password)
