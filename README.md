@@ -38,7 +38,6 @@ There is a fake-store website for training automation tests. My goal is building
                 () -> Assertions.assertEquals("You must agree to the terms of service before continuing."
                         , shippingPage.getTextAlert(), "Wrong text alert")
         );
-        
     }
 
 ## Status
