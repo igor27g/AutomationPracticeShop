@@ -32,7 +32,22 @@ public class CartTest extends BaseTest {
     @Test
     public void addOneProductChangeSizeAndLoginUser() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().clickAddToCartButton()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().changeSizeAndClickAddToCartButton()
+                .confirmSummary()
+                .logIn(email, password)
+                .buttonProccedClick()
+                .AcceptTermsAndButtonProccedClick()
+                .payByBankWire()
+                .confirmMyOrder();
+        Assertions.assertAll("Checking order summary",
+                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+        );
+    }
+
+    @Test
+    public void addOneProductChangeColorAndLoginUser() {
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().changeColorAndClickAddToCartButton()
                 .confirmSummary()
                 .logIn(email, password)
                 .buttonProccedClick()
@@ -49,7 +64,7 @@ public class CartTest extends BaseTest {
     @Test
     public void addTwoProductAndLoginUser() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().addOneMoreProductAndAddToCartButton()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().addTwoProductsAndClickAddToCartButton()
                 .confirmSummary()
                 .logIn(email, password)
                 .buttonProccedClick()

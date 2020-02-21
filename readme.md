@@ -7,13 +7,12 @@ AutomationPracticeShop
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Status](#status)
-* [Inspiration](#inspiration)
 
 ## General info
 There is a fake-store website for training automation tests. My goal is building a framework using Java and Selenium WebDriver. Besides, I use Page Object Model. Each page has a class in the PageObjects folder. Also, I use Selenium Grid to configure browsers version and their instances.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example screenshot](./img/screenshots/screenshot.png)
 
 ## Technologies
 * Java
@@ -28,7 +27,9 @@ There is a fake-store website for training automation tests. My goal is building
 
 ## Code Examples
  @Test
-    public void addOneProductAndNotAcceptTerms() {
+ 
+    public void addOneProductAndNotAcceptTerms() 
+    {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShippingPage shippingPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
                 .logIn(email, password)
@@ -38,6 +39,7 @@ There is a fake-store website for training automation tests. My goal is building
                 () -> Assertions.assertEquals("You must agree to the terms of service before continuing."
                         , shippingPage.getTextAlert(), "Wrong text alert")
         );
+        
     }
 
 ## Status
