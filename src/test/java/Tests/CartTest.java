@@ -27,6 +27,25 @@ public class CartTest extends BaseTest {
         );
     }
 
+    //    add one product and change size and color
+
+    @Test
+    public void addOneProductChangeSizeAndLoginUser() {
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().clickAddToCartButton()
+                .confirmSummary()
+                .logIn(email, password)
+                .buttonProccedClick()
+                .AcceptTermsAndButtonProccedClick()
+                .payByBankWire()
+                .confirmMyOrder();
+        Assertions.assertAll("Checking order summary",
+                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+        );
+    }
+
+
+
     @Test
     public void addTwoProductAndLoginUser() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
