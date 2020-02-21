@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
 
     private String size = "L";
 
+    By contactUsButton = By.cssSelector("div[id='contact-link']");
     By searchInput = By.cssSelector("input[id='search_query_top']");
     By searchSubmit = By.cssSelector("button[name='submit_search']");
     By frameLocator = By.cssSelector("iframe[class='fancybox-iframe']");
@@ -44,6 +45,11 @@ public class HomePage extends BasePage {
         return this;
     }
 
+    public ContactUsPage clickContactUs() {
+        driver.findElement(contactUsButton).click();
+        return new ContactUsPage(driver);
+    }
+
     //Refactor tych metod
     // Frame locator refactor
 
@@ -59,10 +65,6 @@ public class HomePage extends BasePage {
         clickAddToCart2();
         return new ShoppingCartSummary(driver);
     }
-
-
-
-
 
     public ShoppingCartSummary changeSizeAndClickAddToCartButton() {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
