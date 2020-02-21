@@ -14,7 +14,7 @@ public class HomePage extends BasePage {
 
     private String size = "L";
 
-    By contactUsButton = By.cssSelector("div[id='contact-link']");
+    By contactUsButton = By.cssSelector("a[title='Contact Us']");
     By searchInput = By.cssSelector("input[id='search_query_top']");
     By searchSubmit = By.cssSelector("button[name='submit_search']");
     By frameLocator = By.cssSelector("iframe[class='fancybox-iframe']");
@@ -25,11 +25,12 @@ public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
-        wait = new WebDriverWait(driver, 25);
+        wait = new WebDriverWait(driver, 40);
     }
 
     public HomePage goTo(String url) {
         driver.navigate().to(url);
+        wait.until(ExpectedConditions.elementToBeClickable(searchSubmit));
         return new HomePage(driver);
     }
 
@@ -46,7 +47,7 @@ public class HomePage extends BasePage {
     }
 
     public ContactUsPage clickContactUs() {
-        driver.findElement(contactUsButton).click();
+        wait.until(ExpectedConditions.elementToBeClickable(contactUsButton)).click();
         return new ContactUsPage(driver);
     }
 
@@ -92,21 +93,5 @@ public class HomePage extends BasePage {
         dropdown.selectByVisibleText(size);
     }
 
-
-
-
-
 }
 
-
-
-// Choose product from HomePage
-//    Actions action = new Actions(driver);
-//       WebElement element =  driver.findElement(By.cssSelector("div[id='block_top_menu']>ul>li)"));
-//       action.moveToElement(element).click().build().perform();
-////        WebElement productText = driver.findElement(By.xpath("//a[contains(text(), 'T-shirts')])"));
-//
-//
-////        List<WebElement> list = driver.findElements(By.cssSelector("ul[id='homefeatured']>li>div>div:nth-child(2)>div[class='button-container']>a>span"));
-////        wait.until(ExpectedConditions.visibilityOfAllElements(list));
-////        list.get(0).click();
