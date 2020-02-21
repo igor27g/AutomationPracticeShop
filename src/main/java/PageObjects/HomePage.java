@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.Set;
 
 public class HomePage extends BasePage {
     private WebDriverWait wait;
@@ -22,6 +23,7 @@ public class HomePage extends BasePage {
     By addToCartButton = By.cssSelector("button[class='exclusive']>span");
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
     By dropdownListSize = By.cssSelector("select[id='group_1']");
+    By iconTwitter = By.cssSelector("li[class='twitter']");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -34,16 +36,24 @@ public class HomePage extends BasePage {
         return new HomePage(driver);
     }
 
-    public SearchResults findProductInSearch(String productName){
-        driver.findElement(searchInput).sendKeys(productName);
-        driver.findElement(searchSubmit).click();
-        return new SearchResults(driver);
+    public HomePage clickTwitterIcon() {
+        wait.until(ExpectedConditions.elementToBeClickable(iconTwitter)).click();
+        changeTab();
+        return this;
     }
+
 
     public HomePage addProductToCart() {
         List<WebElement> list = driver.findElements(By.cssSelector("ul[id='homefeatured']>li>div>div>div"));
         list.get(0).click();
         return this;
+    }
+
+
+    public SearchResults findProductInSearch(String productName){
+        driver.findElement(searchInput).sendKeys(productName);
+        driver.findElement(searchSubmit).click();
+        return new SearchResults(driver);
     }
 
     public ContactUsPage clickContactUs() {
@@ -91,6 +101,15 @@ public class HomePage extends BasePage {
         WebElement dropdownSize = driver.findElement(dropdownListSize);
         Select dropdown = new Select(dropdownSize);
         dropdown.selectByVisibleText(size);
+    }
+
+    private void changeTab() {
+            Set<String> windows = driver.getWindowHandles();
+            String parentWindow = driver.getWindowHandle();
+            windows.remove(parentWindow);
+            String secondWindow = windows.iterator().next();
+            driver.switchTo().window(secondWindow);
+
     }
 
 }

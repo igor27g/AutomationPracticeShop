@@ -19,6 +19,12 @@ public class ContactUsTest extends BaseTest {
         Assertions.assertEquals("Your message has been successfully sent to our team.", contactUsPage.getAlertMessage());
     }
 
+    @Test
+    public void checkTwitterIcon() {
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickTwitterIcon();
+        Assertions.assertEquals("https://twitter.com/seleniumfrmwrk", driver.getCurrentUrl(), "wrong url");
+    }
+
 
 
 
