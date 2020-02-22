@@ -19,13 +19,13 @@ public class ShippingPage extends BasePage {
 
     public PaymentMethodPage AcceptTermsAndClickProcceedButton() {
         wait.until(ExpectedConditions.elementToBeClickable(terms)).click();
-        wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
+        clickProccedButton();
         return new PaymentMethodPage(driver);
     }
 
     public ShippingPage NotAcceptTermsAndClickProcceedButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
-        return this;
+        clickProccedButton();
+        return new ShippingPage(driver);
     }
 
     public String  getTextAlert() {
@@ -33,4 +33,7 @@ public class ShippingPage extends BasePage {
         return errorAlertText;
     }
 
+    private void clickProccedButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
+    }
 }

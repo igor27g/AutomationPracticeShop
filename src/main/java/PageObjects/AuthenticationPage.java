@@ -32,9 +32,4 @@ public class AuthenticationPage extends BasePage {
         return new AddressPage(driver);
     }
 
-
-
-
-
-
 }

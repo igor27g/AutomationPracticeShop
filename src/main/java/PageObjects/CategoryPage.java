@@ -33,6 +33,10 @@ public class CategoryPage extends BasePage {
 
     private void clickAddToCartButton(){
         js.executeScript("window.scrollBy(0,700)");
+        chooseProduct();
+    }
+
+    private void chooseProduct() {
         actions.moveToElement(driver.findElement(summerDressesProduct)).build().perform();
         actions.moveToElement(driver.findElement(summerDressesProductButton)).click().build().perform();
     }
