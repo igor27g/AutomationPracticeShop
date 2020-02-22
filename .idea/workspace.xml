@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c211c45-62ae-48f3-b8db-28d775ac9978" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PageObjects/CategoryPage.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,8 +32,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Tests/CartTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="393">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CategoryPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -51,19 +57,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Drivers/DriverFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ContactUsPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="201">
+              <caret line="16" column="5" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -77,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="99" selection-start-line="99" selection-end-line="99" />
             </state>
           </provider>
         </entry>
@@ -90,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -159,6 +156,7 @@
         <option value="$PROJECT_DIR$/src/test/java/Tests/CartTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/CategoryPage.java" />
       </list>
     </option>
   </component>
@@ -266,7 +264,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582366807307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582366830695" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
@@ -396,21 +394,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactUsTest_checkTwiiterIcon - 2020.02.21 at 20h 08m 49s.xml">
-      <configuration name="ContactUsTest.checkTwiiterIcon" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContactUsTest_checkTwitterIcon - 2020.02.21 at 20h 10m 13s.xml">
-      <configuration name="ContactUsTest.checkTwitterIcon" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContactUsTest_checkTwitterIcon - 2020.02.21 at 20h 12m 20s.xml">
-      <configuration name="ContactUsTest.checkTwitterIcon" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContactUsTest_checkTwitterIcon - 2020.02.21 at 20h 12m 52s.xml">
-      <configuration name="ContactUsTest.checkTwitterIcon" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContactUsTest_checkTwitterIcon - 2020.02.21 at 20h 13m 27s.xml">
-      <configuration name="ContactUsTest.checkTwitterIcon" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CartTest_addProductFromCategory - 2020.02.21 at 20h 28m 07s.xml">
       <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
     </history-entry>
@@ -424,6 +407,21 @@
       <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CartTest_addProductFromCategory - 2020.02.22 at 11h 15m 36s.xml">
+      <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTest_addProductFromCategory - 2020.02.22 at 11h 18m 11s.xml">
+      <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTest_addProductFromCategory - 2020.02.22 at 11h 18m 50s.xml">
+      <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTest_addProductFromCategory - 2020.02.22 at 11h 19m 02s.xml">
+      <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTest_addProductFromCategory - 2020.02.22 at 11h 19m 59s.xml">
+      <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartTest_addProductFromCategory - 2020.02.22 at 11h 20m 24s.xml">
       <configuration name="CartTest.addProductFromCategory" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -449,8 +447,8 @@
       <window_info id="Favorites" order="6" sideWeight="0.5010526" side_tool="true" weight="0.26174498" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35665694" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.22934888" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35665694" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22934888" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32847425" />
@@ -521,19 +519,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java</url>
-          <line>61</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
@@ -545,19 +531,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java</url>
-          <line>98</line>
+          <line>99</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java</url>
-          <line>121</line>
+          <line>122</line>
           <properties />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java</url>
-          <line>97</line>
+          <line>98</line>
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
@@ -709,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ContactUsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="711">
@@ -723,10 +702,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="99" selection-start-line="99" selection-end-line="99" />
         </state>
       </provider>
     </entry>
@@ -737,24 +723,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Tests/CartTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        <state relative-caret-position="393">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/BasePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/ContactUsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="201">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/CategoryPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
