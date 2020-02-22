@@ -27,6 +27,7 @@ public class HomePage extends BasePage {
     By productAttributes = By.cssSelector("span[id='layer_cart_product_attributes']");
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
     By dropdownListSize = By.cssSelector("select[id='group_1']");
+    By listColorsSelectors = By.cssSelector("ul[id='color_to_pick_list']>*");
     By iconTwitter = By.cssSelector("li[class='twitter']");
     By category = By.cssSelector("div[id='block_top_menu']>ul>li:nth-child(2)");
 
@@ -65,31 +66,30 @@ public class HomePage extends BasePage {
     }
 
     //Refactor tych metod
-    // Frame locator refactor
 
     public ShoppingCartSummary clickAddToCartButton() {
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
+        switchFrame();
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
     public ShoppingCartSummary addTwoProductsAndClickAddToCartButton() {
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
+        switchFrame();
         wait.until(ExpectedConditions.elementToBeClickable(iconPlusQuantity)).click();
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
     public ShoppingCartSummary changeSizeAndClickAddToCartButton() {
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
+        switchFrame();
         changeSize(size);
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
     public ShoppingCartSummary changeColorAndClickAddToCartButton() {
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
-        List <WebElement> listColors = driver.findElements(By.cssSelector("ul[id='color_to_pick_list']>*"));
+        switchFrame();
+        List <WebElement> listColors = driver.findElements(listColorsSelectors);
         listColors.get(1).click();
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
@@ -98,6 +98,10 @@ public class HomePage extends BasePage {
     public CategoryPage addProductToCartFromCategory() {
         chooseCategory();
         return new CategoryPage(driver);
+    }
+
+    private void switchFrame() {
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
     }
 
     private void clickAddToCartInPopUp() {
