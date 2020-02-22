@@ -17,13 +17,13 @@ public class ShippingPage extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-    public PaymentMethodPage AcceptTermsAndButtonProccedClick() {
+    public PaymentMethodPage AcceptTermsAndClickProcceedButton() {
         wait.until(ExpectedConditions.elementToBeClickable(terms)).click();
         wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
         return new PaymentMethodPage(driver);
     }
 
-    public ShippingPage NotAcceptTermsAndButtonProccedClick() {
+    public ShippingPage NotAcceptTermsAndClickProcceedButton() {
         wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
         return this;
     }

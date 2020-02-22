@@ -19,10 +19,7 @@ public class CreateAccountPage extends BasePage {
     By customerLastNameAddressInput = By.cssSelector("input[id='lastname']");
     By customerAddressInput = By.cssSelector("input[id='address1']");
     By customerCityInput = By.cssSelector("input[id='city']");
-
-    //State dropdown
     By customerPostalCodeInput = By.cssSelector("input[id='postcode']");
-    //country dropdown
     By customerMobilePhoneInput = By.cssSelector("input[id='phone_mobile']");
     By customerFutureReferenceInput = By.cssSelector("input[id='alias']");
     By submitButton = By.cssSelector("button[id='submitAccount']");
@@ -44,8 +41,8 @@ public class CreateAccountPage extends BasePage {
         return this;
     }
 
-    public AddressPage newAccount(String firstName, String lastName, String password, String address, String city,
-                                                     String postalCode, String mobilePhone, String futureReference) {
+    public AddressPage createNewAccount(String firstName, String lastName, String password, String address, String city,
+                                        String postalCode, String mobilePhone, String futureReference) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(customerFirstNameInput)).sendKeys(firstName);
         driver.findElement(customerLastNameInput).sendKeys(lastName);
         driver.findElement(customerPasswordInput).sendKeys(password);

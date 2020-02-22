@@ -16,7 +16,7 @@ public class AddressPage extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-    public ShippingPage buttonProccedClick() {
+    public ShippingPage clickProccedButton() {
         wait.until(ExpectedConditions.elementToBeClickable(proccedButton)).click();
         return new ShippingPage(driver);
     }

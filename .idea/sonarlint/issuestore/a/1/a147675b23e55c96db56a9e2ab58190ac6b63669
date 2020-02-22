@@ -1,5 +1,5 @@
 
-~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãşÿÿÿÿ8ã‘ªÃ….
-rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ‡Ğ·ÿÿÿÿÿ8ØÄÏÓ….
 ‰squid:S1488 "fImmediately return this expression instead of assigning it to the temporary variable "errorAlertText".(Áíº›ÿÿÿÿÿ8„İÓ….
 msquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ú8ã‘ªÃ….
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–á‹Ãşÿÿÿÿ8ã‘ªÃ….
+rsquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ‡Ğ·ÿÿÿÿÿ8ØÄÏÓ….

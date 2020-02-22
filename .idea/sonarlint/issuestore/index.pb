@@ -45,3 +45,11 @@ a
 +src/main/java/PageObjects/ShippingPage.java,a\1\a147675b23e55c96db56a9e2ab58190ac6b63669
 Q
 !src/test/java/Tests/CartTest.java,2\6\265a43a7909a616b2624317673249ae8686febd3
+\
+,src/main/java/Utils/ConfigurationReader.java,c\6\c6ce4c3fcbe82d2b69f1e231874f9d3917b80dfc
+\
+,src/main/java/PageObjects/ContactUsPage.java,a\9\a91de083be59b5e8a242e63874a54de7eb251b92
+[
++src/main/java/PageObjects/CategoryPage.java,a\2\a25eb101cbce28bcf6ecd334c62a00e1699996fa
+V
+&src/test/java/Tests/ContactUsTest.java,7\c\7cd5bc00c16b8e6798a84d5180f7f2a6fbc3328a

@@ -16,13 +16,14 @@ public class ContactUsTest extends BaseTest {
     @Test
     public void sendClaim() {
         ContactUsPage contactUsPage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickContactUs().SendAMessage(email,orderNumber,filePath,textMessage);
-        Assertions.assertEquals("Your message has been successfully sent to our team.", contactUsPage.getAlertMessage());
+        Assertions.assertEquals("Your message has been successfully sent to our team.", contactUsPage.getAlertMessage(),
+                "No succesful message found");
     }
 
     @Test
     public void checkTwitterIcon() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickTwitterIcon();
-        Assertions.assertEquals("https://twitter.com/seleniumfrmwrk", driver.getCurrentUrl(), "wrong url");
+        Assertions.assertEquals("https://twitter.com/seleniumfrmwrk", driver.getCurrentUrl(), "No url twitter found");
     }
 
 

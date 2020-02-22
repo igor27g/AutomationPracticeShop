@@ -25,7 +25,7 @@ public class AuthenticationPage extends BasePage {
         return new CreateAccountPage(driver);
     }
 
-    public AddressPage logIn(String email, String password) {
+    public AddressPage loginUser(String email, String password) {
         driver.findElement(emailLoginInput).sendKeys(email);
         driver.findElement(passwordLoginInput).sendKeys(password);
         driver.findElement(signInButton).click();

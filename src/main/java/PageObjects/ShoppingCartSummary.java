@@ -22,7 +22,7 @@ public class ShoppingCartSummary extends BasePage {
         return new AuthenticationPage(driver);
     }
 
-    public Integer howManyProductsContainsCart() {
+    public Integer getHowManyProductsAreInCart() {
         String amountProduct = wait.until(ExpectedConditions.visibilityOfElementLocated(amountProductsInCart)).getText().substring(0,2).trim();
         return Integer.parseInt(amountProduct);
     }

@@ -20,7 +20,6 @@ public class SearchResults extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-
     public ProductPage chooseProductFromSearchResult() {
         List<WebElement> listProductResult = driver.findElements(listProduct);
         listProductResult.size();

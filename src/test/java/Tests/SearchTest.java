@@ -19,21 +19,22 @@ public class SearchTest extends BaseTest {
     public void addOneProductToCartAndCreatneNewAccount() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addToCartAndConfirmProduct();
-        int productsAmount = shoppingCartSummary.howManyProductsContainsCart();
+        int productsAmount = shoppingCartSummary.getHowManyProductsAreInCart();
 
         OrderConfirmationPage orderConfirmationPage = shoppingCartSummary.confirmSummary()
                 .createNewEmail("xyz" + rand.nextInt(1000) + "@ovh.pl").chooseTitle()
                 .chooseTitle()
-                .newAccount("Tom", "Kowalski", "password", "Streei 11"
+                .createNewAccount("Tom", "Kowalski", "password", "Streei 11"
                         , "New York", "12345", "123456789", "future Reference")
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
 
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(29.0, orderConfirmationPage.getTotalAmount(), "Total amount is wrong"),
-                () -> Assertions.assertEquals(1, productsAmount, "Wrong amount product in cart")
+                () -> Assertions.assertEquals(29.0, orderConfirmationPage.getTotalAmount(),
+                        "Total price of product is not what expected. Expected 29.0, but was..."),
+                () -> Assertions.assertEquals(1, productsAmount, "Quantity of the product is not what expected. Expected: 11, but was ")
         );
     }
 
@@ -41,7 +42,8 @@ public class SearchTest extends BaseTest {
     public void findProductWithWrongName() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         SearchResults searchResults = homePage.findProductInSearch(wrongNameProduct);
-        Assertions.assertEquals("No results were found for your search "  + "\"" + wrongNameProduct + "\"" , searchResults.getTextFromAlert());
+        Assertions.assertEquals("No results were found for your search "  + "\"" + wrongNameProduct + "\"" , searchResults.getTextFromAlert(),
+                "No results message wasn't found");
     }
 
 }
