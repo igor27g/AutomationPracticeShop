@@ -3,6 +3,7 @@ package PageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +13,7 @@ import java.util.Set;
 
 public class HomePage extends BasePage {
     private WebDriverWait wait;
+    Actions actions = new Actions(driver);
 
     private String size = "L";
 
@@ -24,6 +26,7 @@ public class HomePage extends BasePage {
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
     By dropdownListSize = By.cssSelector("select[id='group_1']");
     By iconTwitter = By.cssSelector("li[class='twitter']");
+    By category = By.cssSelector("div[id='block_top_menu']>ul>li:nth-child(2)");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -92,6 +95,11 @@ public class HomePage extends BasePage {
         return new ShoppingCartSummary(driver);
     }
 
+    public ShoppingCartSummary addProductToCartFromCategory() {
+        chooseCategory();
+        return new ShoppingCartSummary(driver);
+    }
+
     private void clickAddToCart2() {
         wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(proccedToCheckoutButton)).click();
@@ -104,12 +112,15 @@ public class HomePage extends BasePage {
     }
 
     private void changeTab() {
-            Set<String> windows = driver.getWindowHandles();
-            String parentWindow = driver.getWindowHandle();
-            windows.remove(parentWindow);
-            String secondWindow = windows.iterator().next();
-            driver.switchTo().window(secondWindow);
+        Set<String> windows = driver.getWindowHandles();
+        String parentWindow = driver.getWindowHandle();
+        windows.remove(parentWindow);
+        String secondWindow = windows.iterator().next();
+        driver.switchTo().window(secondWindow);
+    }
 
+    private void chooseCategory() {
+        actions.moveToElement(driver.findElement(category)).click().build().perform();
     }
 
 }

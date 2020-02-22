@@ -3,6 +3,7 @@ package Tests;
 import PageObjects.HomePage;
 import PageObjects.OrderConfirmationPage;
 import PageObjects.ShippingPage;
+import PageObjects.ShoppingCartSummary;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -87,6 +88,13 @@ public class CartTest extends BaseTest {
                 () -> Assertions.assertEquals("You must agree to the terms of service before continuing."
                         , shippingPage.getTextAlert(), "Wrong text alert")
         );
+    }
+
+    @Test
+    public void addProductFromCategory() {
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
+        ShoppingCartSummary shoppingCartSummary = homePage.addProductToCartFromCategory();
+
     }
 
 
