@@ -3,6 +3,7 @@ package Utils;
 public class TestDataReader extends FileReader {
 
     private String testDataLocation;
+    private User user;
 
     public TestDataReader(String testDataLocation) {
         super(testDataLocation);
@@ -10,8 +11,17 @@ public class TestDataReader extends FileReader {
     }
 
     void loadData() {
-
+        user = new User(properties);
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getTestDataLocation() {
+        return testDataLocation;
+    }
+
 
 
 }
