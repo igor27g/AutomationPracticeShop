@@ -20,7 +20,7 @@ public class OrderConfirmationPage extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-    public OrderConfirmationCompletePage confirmatOrder() {
+    public OrderConfirmationCompletePage confirmCompleteOrder() {
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
         return new OrderConfirmationCompletePage(driver);
     }

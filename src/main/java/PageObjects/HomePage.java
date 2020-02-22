@@ -20,9 +20,11 @@ public class HomePage extends BasePage {
     By contactUsButton = By.cssSelector("a[title='Contact Us']");
     By searchInput = By.cssSelector("input[id='search_query_top']");
     By searchSubmit = By.cssSelector("button[name='submit_search']");
+    By productList = By.cssSelector("ul[id='homefeatured']>li>div>div>div");
     By frameLocator = By.cssSelector("iframe[class='fancybox-iframe']");
     By iconPlusQuantity = By.cssSelector("i[class='icon-plus']");
     By addToCartButton = By.cssSelector("button[class='exclusive']>span");
+    By productAttributes = By.cssSelector("span[id='layer_cart_product_attributes']");
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
     By dropdownListSize = By.cssSelector("select[id='group_1']");
     By iconTwitter = By.cssSelector("li[class='twitter']");
@@ -45,13 +47,11 @@ public class HomePage extends BasePage {
         return this;
     }
 
-
-    public HomePage addProductToCart() {
-        List<WebElement> list = driver.findElements(By.cssSelector("ul[id='homefeatured']>li>div>div>div"));
+    public HomePage addProductToCartFromProductList() {
+        List<WebElement> list = driver.findElements(productList);
         list.get(0).click();
         return this;
     }
-
 
     public SearchResults findProductInSearch(String productName){
         driver.findElement(searchInput).sendKeys(productName);
@@ -69,21 +69,21 @@ public class HomePage extends BasePage {
 
     public ShoppingCartSummary clickAddToCartButton() {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
-        clickAddToCart2();
+        clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
     public ShoppingCartSummary addTwoProductsAndClickAddToCartButton() {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
         wait.until(ExpectedConditions.elementToBeClickable(iconPlusQuantity)).click();
-        clickAddToCart2();
+        clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
     public ShoppingCartSummary changeSizeAndClickAddToCartButton() {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
         changeSize(size);
-        clickAddToCart2();
+        clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
@@ -91,7 +91,7 @@ public class HomePage extends BasePage {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
         List <WebElement> listColors = driver.findElements(By.cssSelector("ul[id='color_to_pick_list']>*"));
         listColors.get(1).click();
-        clickAddToCart2();
+        clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
@@ -100,7 +100,7 @@ public class HomePage extends BasePage {
         return new CategoryPage(driver);
     }
 
-    private void clickAddToCart2() {
+    private void clickAddToCartInPopUp() {
         wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
         wait.until(ExpectedConditions.elementToBeClickable(proccedToCheckoutButton)).click();
     }

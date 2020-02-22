@@ -14,10 +14,10 @@ public class CartTest extends BaseTest {
     @Test
     public void addToCartFromHomePage() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
-                .logIn(email, password)
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromProductList().clickAddToCartButton().confirmSummary()
+                .loginUser(email, password)
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
@@ -26,20 +26,18 @@ public class CartTest extends BaseTest {
         );
     }
 
-    //    add one product and change size and color
-
     @Test
     public void changeSizeProduct() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().changeSizeAndClickAddToCartButton()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromProductList().changeSizeAndClickAddToCartButton()
                 .confirmSummary()
-                .logIn(email, password)
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+                .loginUser(email, password)
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount()
+                () -> Assertions.assertEquals(18.51, orderConfirmationPage.getTotalAmount()
                         , "Total price of product is not what expected. Expected 35.02, but was...")
                 /// Assertions for size
         );
@@ -48,11 +46,11 @@ public class CartTest extends BaseTest {
     @Test
     public void changeColorProduct() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().changeColorAndClickAddToCartButton()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromProductList().changeColorAndClickAddToCartButton()
                 .confirmSummary()
-                .logIn(email, password)
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+                .loginUser(email, password)
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
@@ -67,11 +65,11 @@ public class CartTest extends BaseTest {
     @Test
     public void changeQuantityProduct() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().addTwoProductsAndClickAddToCartButton()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromProductList().addTwoProductsAndClickAddToCartButton()
                 .confirmSummary()
-                .logIn(email, password)
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+                .loginUser(email, password)
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
@@ -84,11 +82,11 @@ public class CartTest extends BaseTest {
     @Test
     public void addProductFromCategory() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromCategory().chooseSubCategories()
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromCategory().chooseProductFromSubcategories()
                 .confirmSummary()
-                .logIn(email, password)
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+                .loginUser(email, password)
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
@@ -101,10 +99,10 @@ public class CartTest extends BaseTest {
     @Test
     public void addOneProductFromHomePageAndNotAcceptTerms() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        ShippingPage shippingPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
-                .logIn(email, password)
-                .buttonProccedClick()
-                .NotAcceptTermsAndButtonProccedClick();
+        ShippingPage shippingPage = homePage.addProductToCartFromProductList().clickAddToCartButton().confirmSummary()
+                .loginUser(email, password)
+                .clickProccedButton()
+                .NotAcceptTermsAndClickProcceedButton();
         Assertions.assertAll("Checking order summary",
                 () -> Assertions.assertEquals("You must agree to the terms of service before continuing."
                         , shippingPage.getTextAlert(), "No alert message found")

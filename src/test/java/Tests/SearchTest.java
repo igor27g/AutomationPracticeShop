@@ -19,15 +19,15 @@ public class SearchTest extends BaseTest {
     public void addOneProductToCartAndCreatneNewAccount() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addToCartAndConfirmProduct();
-        int productsAmount = shoppingCartSummary.howManyProductsContainsCart();
+        int productsAmount = shoppingCartSummary.getHowManyProductsAreInCart();
 
         OrderConfirmationPage orderConfirmationPage = shoppingCartSummary.confirmSummary()
                 .createNewEmail("xyz" + rand.nextInt(1000) + "@ovh.pl").chooseTitle()
                 .chooseTitle()
-                .newAccount("Tom", "Kowalski", "password", "Streei 11"
+                .createNewAccount("Tom", "Kowalski", "password", "Streei 11"
                         , "New York", "12345", "123456789", "future Reference")
-                .buttonProccedClick()
-                .AcceptTermsAndButtonProccedClick()
+                .clickProccedButton()
+                .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
 

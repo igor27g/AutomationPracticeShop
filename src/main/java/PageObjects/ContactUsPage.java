@@ -24,14 +24,8 @@ public class ContactUsPage extends BasePage {
     By submitButton = By.id("submitMessage");
     By alertText = By.cssSelector("p.alert-success");
 
-
-
-
-
     WebElement dropdownSubject = driver.findElement(dropdownSubjectHeadingList);
     Select dropdown = new Select(dropdownSubject);
-
-
 
     public ContactUsPage SendAMessage(String email, String orderNumber, String filePath, String textMessage) {
         dropdown.selectByIndex(1);

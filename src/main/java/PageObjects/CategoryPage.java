@@ -24,14 +24,14 @@ public class CategoryPage extends BasePage {
         wait = new WebDriverWait(driver, 20);
     }
 
-    public ShoppingCartSummary chooseSubCategories() {
+    public ShoppingCartSummary chooseProductFromSubcategories() {
         wait.until(ExpectedConditions.elementToBeClickable(summerDressesCategory)).click();
-        clickButton();
+        clickAddToCartButton();
         wait.until(ExpectedConditions.elementToBeClickable(proccedToCheckoutButton)).click();
         return new ShoppingCartSummary(driver);
     }
 
-    private void clickButton(){
+    private void clickAddToCartButton(){
         js.executeScript("window.scrollBy(0,700)");
         actions.moveToElement(driver.findElement(summerDressesProduct)).build().perform();
         actions.moveToElement(driver.findElement(summerDressesProductButton)).click().build().perform();
