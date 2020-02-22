@@ -1,9 +1,6 @@
 package Tests;
 
-import PageObjects.HomePage;
-import PageObjects.OrderConfirmationPage;
-import PageObjects.ShippingPage;
-import PageObjects.ShoppingCartSummary;
+import PageObjects.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -93,7 +90,7 @@ public class CartTest extends BaseTest {
     @Test
     public void addProductFromCategory() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        ShoppingCartSummary shoppingCartSummary = homePage.addProductToCartFromCategory();
+        CategoryPage categoryPage = homePage.addProductToCartFromCategory().chooseSubCategories();
 
     }
 

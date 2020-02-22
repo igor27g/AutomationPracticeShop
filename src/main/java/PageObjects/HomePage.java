@@ -95,9 +95,9 @@ public class HomePage extends BasePage {
         return new ShoppingCartSummary(driver);
     }
 
-    public ShoppingCartSummary addProductToCartFromCategory() {
+    public CategoryPage addProductToCartFromCategory() {
         chooseCategory();
-        return new ShoppingCartSummary(driver);
+        return new CategoryPage(driver);
     }
 
     private void clickAddToCart2() {
