@@ -75,6 +75,22 @@ public class CartTest extends BaseTest {
     }
 
     @Test
+    public void addProductFromCategory() {
+        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
+        OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromCategory().chooseSubCategories()
+                .confirmSummary()
+                .logIn(email, password)
+                .buttonProccedClick()
+                .AcceptTermsAndButtonProccedClick()
+                .payByBankWire()
+                .confirmMyOrder();
+        Assertions.assertAll("Checking order summary",
+                () -> Assertions.assertEquals(30.98, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+        );
+
+    }
+
+    @Test
     public void addOneProductAndNotAcceptTerms() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShippingPage shippingPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
@@ -87,12 +103,7 @@ public class CartTest extends BaseTest {
         );
     }
 
-    @Test
-    public void addProductFromCategory() {
-        HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        CategoryPage categoryPage = homePage.addProductToCartFromCategory().chooseSubCategories();
 
-    }
 
 
 

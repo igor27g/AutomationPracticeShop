@@ -16,7 +16,6 @@ public class CategoryPage extends BasePage {
     By summerDressesCategory = By.cssSelector("div[id='subcategories']>ul>li:nth-child(3)>div");
     By summerDressesProduct = By.cssSelector(".product_list>li");
     By summerDressesProductButton = By.cssSelector(".product_list>li>div>div:nth-child(2)>:nth-child(4)>a>span");
-    By frameLocator = By.cssSelector("iframe[class='fancybox-iframe']");
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
 
 
