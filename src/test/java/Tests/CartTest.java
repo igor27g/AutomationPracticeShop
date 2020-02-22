@@ -12,7 +12,7 @@ public class CartTest extends BaseTest {
 
 
     @Test
-    public void addOneProductAndLoginUser() {
+    public void addToCartFromHomePage() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
                 .logIn(email, password)
@@ -21,14 +21,15 @@ public class CartTest extends BaseTest {
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(18.51, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+                () -> Assertions.assertEquals(18.51, orderConfirmationPage.getTotalAmount()
+                        , "Total price of product is not what expected. Expected 18.51, but was...")
         );
     }
 
     //    add one product and change size and color
 
     @Test
-    public void addOneProductChangeSizeAndLoginUser() {
+    public void changeSizeProduct() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().changeSizeAndClickAddToCartButton()
                 .confirmSummary()
@@ -38,12 +39,14 @@ public class CartTest extends BaseTest {
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount()
+                        , "Total price of product is not what expected. Expected 35.02, but was...")
+                /// Assertions for size
         );
     }
 
     @Test
-    public void addOneProductChangeColorAndLoginUser() {
+    public void changeColorProduct() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().changeColorAndClickAddToCartButton()
                 .confirmSummary()
@@ -53,14 +56,16 @@ public class CartTest extends BaseTest {
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(),
+                        "Total price of product is not what expected. Expected 35.02, but was...")
+                // Assertions for color
         );
     }
 
 
 
     @Test
-    public void addTwoProductAndLoginUser() {
+    public void changeQuantityProduct() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCart().addTwoProductsAndClickAddToCartButton()
                 .confirmSummary()
@@ -70,7 +75,9 @@ public class CartTest extends BaseTest {
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+                () -> Assertions.assertEquals(35.02, orderConfirmationPage.getTotalAmount(),
+                        "Total price of product is not what expected. Expected 35.02, but was...")
+                // Assertions for quantity
         );
     }
 
@@ -85,13 +92,14 @@ public class CartTest extends BaseTest {
                 .payByBankWire()
                 .confirmMyOrder();
         Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(30.98, orderConfirmationPage.getTotalAmount(), "Total amount is wrong")
+                () -> Assertions.assertEquals(30.98, orderConfirmationPage.getTotalAmount(),
+                        "Total price of product is not what expected. Expected 30.98, but was...")
         );
 
     }
 
     @Test
-    public void addOneProductAndNotAcceptTerms() {
+    public void addOneProductFromHomePageAndNotAcceptTerms() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShippingPage shippingPage = homePage.addProductToCart().clickAddToCartButton().confirmSummary()
                 .logIn(email, password)
@@ -99,7 +107,7 @@ public class CartTest extends BaseTest {
                 .NotAcceptTermsAndButtonProccedClick();
         Assertions.assertAll("Checking order summary",
                 () -> Assertions.assertEquals("You must agree to the terms of service before continuing."
-                        , shippingPage.getTextAlert(), "Wrong text alert")
+                        , shippingPage.getTextAlert(), "No alert message found")
         );
     }
 
