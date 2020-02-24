@@ -48,7 +48,7 @@ public class CartTest extends BaseTest {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromProductList().changeColorAndClickAddToCartButton()
                 .confirmSummary()
-                .loginUser(email, password)
+                .loginUser(testData.getUser().getEmail(), testData.getUser().getPassword())
                 .clickProccedButton()
                 .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
@@ -67,7 +67,7 @@ public class CartTest extends BaseTest {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromProductList().addTwoProductsAndClickAddToCartButton()
                 .confirmSummary()
-                .loginUser(email, password)
+                .loginUser(testData.getUser().getEmail(), testData.getUser().getPassword())
                 .clickProccedButton()
                 .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
@@ -84,7 +84,7 @@ public class CartTest extends BaseTest {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         OrderConfirmationPage orderConfirmationPage = homePage.addProductToCartFromCategory().chooseProductFromSubcategories()
                 .confirmSummary()
-                .loginUser(email, password)
+                .loginUser(testData.getUser().getEmail(), testData.getUser().getPassword())
                 .clickProccedButton()
                 .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
@@ -100,7 +100,7 @@ public class CartTest extends BaseTest {
     public void addOneProductFromHomePageAndNotAcceptTerms() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
         ShippingPage shippingPage = homePage.addProductToCartFromProductList().clickAddToCartButton().confirmSummary()
-                .loginUser(email, password)
+                .loginUser(testData.getUser().getEmail(), testData.getUser().getPassword())
                 .clickProccedButton()
                 .NotAcceptTermsAndClickProcceedButton();
         Assertions.assertAll("Checking order summary",

@@ -22,10 +22,10 @@ public class SearchTest extends BaseTest {
         int productsAmount = shoppingCartSummary.getHowManyProductsAreInCart();
 
         OrderConfirmationPage orderConfirmationPage = shoppingCartSummary.confirmSummary()
-                .createNewEmail("xyz" + rand.nextInt(1000) + "@ovh.pl").chooseTitle()
+                .createNewEmail().chooseTitle()
                 .chooseTitle()
-                .createNewAccount("Tom", "Kowalski", "password", "Streei 11"
-                        , "New York", "12345", "123456789", "future Reference")
+                .createNewAccount(testData.getUser().getName(), testData.getUser().getLastName(), testData.getUser().getPassword(), testData.getUser().getStreet()
+                        , testData.getUser().getCity(), testData.getUser().getPostalCode(), testData.getUser().getMobilePhone())
                 .clickProccedButton()
                 .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()

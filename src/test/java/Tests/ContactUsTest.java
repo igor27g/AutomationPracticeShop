@@ -15,7 +15,10 @@ public class ContactUsTest extends BaseTest {
 
     @Test
     public void sendClaim() {
-        ContactUsPage contactUsPage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickContactUs().SendAMessage(email,orderNumber,filePath,textMessage);
+        ContactUsPage contactUsPage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickContactUs()
+                .SendAMessage(testData.getUser().getEmail(),testData.getClaimInformation().getOrderNumber()
+                        ,testData.getClaimInformation().getFilePath()
+                        ,testData.getClaimInformation().getTextMessage());
         Assertions.assertEquals("Your message has been successfully sent to our team.", contactUsPage.getAlertMessage(),
                 "No succesful message found");
     }
@@ -23,7 +26,7 @@ public class ContactUsTest extends BaseTest {
     @Test
     public void checkTwitterIcon() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickTwitterIcon();
-        Assertions.assertEquals("https://twitter.com/seleniumfrmwrk", driver.getCurrentUrl(), "No url twitter found");
+        Assertions.assertEquals(testData.getClaimInformation().getTwitterUrl(), driver.getCurrentUrl(), "No url twitter found");
     }
 
 
