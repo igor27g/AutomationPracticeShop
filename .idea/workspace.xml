@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1c211c45-62ae-48f3-b8db-28d775ac9978" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/PageObjects/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PageObjects/HomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Tests/ContactUsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Tests/ContactUsTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -85,20 +86,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+            <state relative-caret-position="204">
+              <caret line="12" column="98" lean-forward="true" selection-start-line="12" selection-start-column="92" selection-end-line="12" selection-end-column="106" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="63" column="76" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
+            <state relative-caret-position="348">
+              <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -167,8 +168,8 @@
         <option value="$PROJECT_DIR$/src/test/java/TestData.properties" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Product.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/SearchTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" />
         <option value="$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java" />
       </list>
     </option>
   </component>
@@ -268,7 +269,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582549217005" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582549492709" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
@@ -398,12 +399,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactUsTest_sendClaim - 2020.02.24 at 13h 47m 26s.xml">
-      <configuration name="ContactUsTest.sendClaim" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ContactUsTest - 2020.02.24 at 13h 48m 05s.xml">
-      <configuration name="ContactUsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ContactUsTest_sendClaim - 2020.02.24 at 13h 48m 43s.xml">
       <configuration name="ContactUsTest.sendClaim" configurationId="JUnit" />
     </history-entry>
@@ -428,6 +423,12 @@
     <history-entry file="ContactUsTest_sendClaim - 2020.02.24 at 14h 00m 32s.xml">
       <configuration name="ContactUsTest.sendClaim" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ContactUsTest_sendClaim - 2020.02.24 at 14h 02m 37s.xml">
+      <configuration name="ContactUsTest.sendClaim" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ContactUsTest_sendClaim - 2020.02.24 at 14h 03m 50s.xml">
+      <configuration name="ContactUsTest.sendClaim" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -442,7 +443,7 @@
     <frame x="1911" y="-9" width="1938" height="1170" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.2153518" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49894738" visible="true" weight="0.2153518" />
       <window_info id="Structure" order="1" sideWeight="0.5010526" side_tool="true" weight="0.26174498" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -451,7 +452,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5010526" side_tool="true" weight="0.26174498" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1856171" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1856171" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.22934888" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -742,17 +743,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="63" column="76" selection-start-line="63" selection-start-column="76" selection-end-line="63" selection-end-column="76" />
+        <state relative-caret-position="204">
+          <caret line="12" column="98" lean-forward="true" selection-start-line="12" selection-start-column="92" selection-end-line="12" selection-end-column="106" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Tests/ContactUsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PageObjects/HomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        <state relative-caret-position="348">
+          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
         </state>
       </provider>
     </entry>

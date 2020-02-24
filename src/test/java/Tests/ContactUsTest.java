@@ -3,11 +3,12 @@ package Tests;
 import PageObjects.ContactUsPage;
 import PageObjects.HomePage;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 public class ContactUsTest extends BaseTest {
 
-    @Test
+    @RepeatedTest(3)
     public void sendClaim() {
         ContactUsPage contactUsPage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickContactUs()
                 .SendAMessage(testData.getUser().getEmail(),testData.getClaimInformation().getOrderNumber()
