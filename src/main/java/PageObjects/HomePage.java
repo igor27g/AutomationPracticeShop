@@ -61,7 +61,9 @@ public class HomePage extends BasePage {
     }
 
     public ContactUsPage clickContactUs() {
-        wait.until(ExpectedConditions.elementToBeClickable(contactUsButton)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(category));
+        Actions actions = new Actions(driver);
+        actions.moveToElement(driver.findElement(contactUsButton)).click().build().perform();
         return new ContactUsPage(driver);
     }
 
