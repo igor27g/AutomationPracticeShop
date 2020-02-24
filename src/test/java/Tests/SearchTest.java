@@ -1,31 +1,27 @@
 package Tests;
 
-import PageObjects.*;
+import PageObjects.HomePage;
+import PageObjects.OrderConfirmationPage;
+import PageObjects.SearchResults;
+import PageObjects.ShoppingCartSummary;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
-
 public class SearchTest extends BaseTest {
 
-
-    private String productName = "Blouse";
-    private String wrongNameProduct = "wrongNameProduct";
-
-    Random rand = new Random();
-
+    private String wrongNameProduct = "";
 
     @Test
     public void addOneProductToCartAndCreatneNewAccount() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(productName).chooseProductFromSearchResult().addToCartAndConfirmProduct();
+        ShoppingCartSummary shoppingCartSummary = homePage.findProductInSearch(testData.getProduct().getProductName()).chooseProductFromSearchResult().addToCartAndConfirmProduct();
         int productsAmount = shoppingCartSummary.getHowManyProductsAreInCart();
 
         OrderConfirmationPage orderConfirmationPage = shoppingCartSummary.confirmSummary()
-                .createNewEmail("xyz" + rand.nextInt(1000) + "@ovh.pl").chooseTitle()
+                .createNewEmail().chooseTitle()
                 .chooseTitle()
-                .createNewAccount("Tom", "Kowalski", "password", "Streei 11"
-                        , "New York", "12345", "123456789", "future Reference")
+                .createNewAccount(testData.getUser().getName(), testData.getUser().getLastName(), testData.getUser().getPassword(), testData.getUser().getStreet()
+                        , testData.getUser().getCity(), testData.getUser().getPostalCode(), testData.getUser().getMobilePhone())
                 .clickProccedButton()
                 .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
@@ -41,8 +37,8 @@ public class SearchTest extends BaseTest {
     @Test
     public void findProductWithWrongName() {
         HomePage homePage = new HomePage(driver).goTo(configuration.getBaseUrl());
-        SearchResults searchResults = homePage.findProductInSearch(wrongNameProduct);
-        Assertions.assertEquals("No results were found for your search "  + "\"" + wrongNameProduct + "\"" , searchResults.getTextFromAlert(),
+        SearchResults searchResults = homePage.findProductInSearch(testData.getProduct().getWrongProductName());
+        Assertions.assertEquals("No results were found for your search "  + "\"" + testData.getProduct().getWrongProductName() + "\"" , searchResults.getTextFromAlert(),
                 "No results message wasn't found");
     }
 

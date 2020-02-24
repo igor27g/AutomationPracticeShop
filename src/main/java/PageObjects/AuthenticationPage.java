@@ -4,8 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Random;
+
 public class AuthenticationPage extends BasePage {
     private WebDriverWait wait;
+    Random random = new Random();
 
     By emailCreateInput = By.cssSelector("input[id='email_create']");
     By emailLoginInput = By.cssSelector("input[id='email']");
@@ -19,8 +22,8 @@ public class AuthenticationPage extends BasePage {
         wait = new WebDriverWait(driver, 15);
     }
 
-    public CreateAccountPage createNewEmail(String email) {
-        driver.findElement(emailCreateInput).sendKeys(email);
+    public CreateAccountPage createNewEmail() {
+        driver.findElement(emailCreateInput).sendKeys(createRandomEmail());
         driver.findElement(createAccountButton).click();
         return new CreateAccountPage(driver);
     }
@@ -32,4 +35,7 @@ public class AuthenticationPage extends BasePage {
         return new AddressPage(driver);
     }
 
+    private String createRandomEmail() {
+        return ("xyz" + random.nextInt(1000) + "@ovhRandom.pl");
+    }
 }

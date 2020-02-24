@@ -42,18 +42,15 @@ public class CreateAccountPage extends BasePage {
     }
 
     public AddressPage createNewAccount(String firstName, String lastName, String password, String address, String city,
-                                        String postalCode, String mobilePhone, String futureReference) {
+                                        String postalCode, String mobilePhone) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(customerFirstNameInput)).sendKeys(firstName);
         driver.findElement(customerLastNameInput).sendKeys(lastName);
         driver.findElement(customerPasswordInput).sendKeys(password);
-        driver.findElement(customerFirstNameAddressInput).sendKeys(firstName);
-        driver.findElement(customerLastNameAddressInput).sendKeys(lastName);
         driver.findElement(customerAddressInput).sendKeys(address);
         driver.findElement(customerCityInput).sendKeys(city);
         new Select(driver.findElement(By.id("id_state"))).selectByVisibleText("Arizona");
         driver.findElement(customerPostalCodeInput).sendKeys(postalCode);
         driver.findElement(customerMobilePhoneInput).sendKeys(mobilePhone);
-        driver.findElement(customerFutureReferenceInput).sendKeys(futureReference);
         driver.findElement(submitButton).click();
         return new AddressPage(driver);
     }
