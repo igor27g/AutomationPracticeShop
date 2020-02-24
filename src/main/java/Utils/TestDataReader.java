@@ -5,6 +5,7 @@ public class TestDataReader extends FileReader {
     private String testDataLocation;
     private User user;
     private ClaimInformation claimInformation;
+    private Product product;
 
     public TestDataReader(String testDataLocation) {
         super(testDataLocation);
@@ -14,6 +15,7 @@ public class TestDataReader extends FileReader {
     void loadData() {
         user = new User(properties);
         claimInformation = new ClaimInformation(properties);
+        product = new Product(properties);
     }
 
     public User getUser() {
@@ -22,6 +24,10 @@ public class TestDataReader extends FileReader {
 
     public ClaimInformation getClaimInformation() {
         return claimInformation;
+    }
+
+    public Product getProduct() {
+        return product;
     }
 
     public String getTestDataLocation() {

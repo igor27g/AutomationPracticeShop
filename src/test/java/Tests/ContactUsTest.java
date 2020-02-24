@@ -7,12 +7,6 @@ import org.junit.jupiter.api.Test;
 
 public class ContactUsTest extends BaseTest {
 
-    private String email = "testerMessage1@gmail111.com";
-    private String orderNumber = "123456";
-    private String filePath = "D:\\Users\\Igor\\Desktop\\AutomationPracticeShop\\testFile.txt";
-    private String textMessage = "Lorem ipsum lorem ipsum";
-
-
     @Test
     public void sendClaim() {
         ContactUsPage contactUsPage = new HomePage(driver).goTo(configuration.getBaseUrl()).clickContactUs()
