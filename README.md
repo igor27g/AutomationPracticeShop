@@ -20,10 +20,22 @@ There is a fake-store website for training automation tests. My goal is building
 * JUnit - version 5.3.2
 
 ## Setup
-1. Open folder 'Selenium Server'
-2. Run file 'hubstart'
-3. Run file 'nodestart'
-4. After, you can start tests.
+
+First method:
+1. Clone project repository from GitHub:
+git clone https://github.com/igor27g/AutomationPracticeShop.git
+2. Open folder with project
+3. Open command line
+4. Write mvn -version in command line
+5. Write mvn install
+Tests should run.
+
+Second method:
+1. Clone project repository from GitHub:
+git clone https://github.com/igor27g/AutomationPracticeShop.git
+2. Open folder with project
+3. Open project using Intellij
+4. Run tests using Intellij
 
 ## Code Examples
  @Test
