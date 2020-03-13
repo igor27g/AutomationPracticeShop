@@ -21,15 +21,15 @@ public class HomePage extends BasePage {
     By searchInput = By.cssSelector("input[id='search_query_top']");
     By searchSubmit = By.cssSelector("button[name='submit_search']");
     By productList = By.cssSelector("ul[id='homefeatured']>li>div>div>div");
-    By frameLocator = By.cssSelector("iframe[class='fancybox-iframe']");
+    By frameLocator = By.id("fancybox-frame1584119115846");
     By iconPlusQuantity = By.cssSelector("i[class='icon-plus']");
-    By addToCartButton = By.cssSelector("button[class='exclusive']>span");
-    By productAttributes = By.cssSelector("span[id='layer_cart_product_attributes']");
+    By addToCartButton = By.cssSelector("button.exclusive");
     By proccedToCheckoutButton = By.cssSelector("a[title='Proceed to checkout']");
     By dropdownListSize = By.cssSelector("select[id='group_1']");
     By listColorsSelectors = By.cssSelector("ul[id='color_to_pick_list']>*");
     By iconTwitter = By.cssSelector("li[class='twitter']");
     By category = By.cssSelector("div[id='block_top_menu']>ul>li:nth-child(2)");
+    By loader = By.cssSelector("div");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -67,32 +67,35 @@ public class HomePage extends BasePage {
         return new ContactUsPage(driver);
     }
 
-    //Refactor tych metod
-
-    public ShoppingCartSummary clickAddToCartButton() {
+    public ShoppingCartSummary clickAddToCartButton() throws InterruptedException {
         switchFrame();
+        Thread.sleep(5000);
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
-    public ShoppingCartSummary addTwoProductsAndClickAddToCartButton() {
+    public ShoppingCartSummary addTwoProductsAndClickAddToCartButton() throws InterruptedException {
         switchFrame();
+        Thread.sleep(5000);
         wait.until(ExpectedConditions.elementToBeClickable(iconPlusQuantity)).click();
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
-    public ShoppingCartSummary changeSizeAndClickAddToCartButton() {
+    public ShoppingCartSummary changeSizeAndClickAddToCartButton() throws InterruptedException {
         switchFrame();
+        Thread.sleep(5000);
         changeSize(size);
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }
 
-    public ShoppingCartSummary changeColorAndClickAddToCartButton() {
+    public ShoppingCartSummary changeColorAndClickAddToCartButton() throws InterruptedException {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(loader));
         switchFrame();
-        List <WebElement> listColors = driver.findElements(listColorsSelectors);
+        List<WebElement> listColors = driver.findElements(listColorsSelectors);
         listColors.get(1).click();
+        Thread.sleep(7000);
         clickAddToCartInPopUp();
         return new ShoppingCartSummary(driver);
     }

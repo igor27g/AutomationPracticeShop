@@ -53,3 +53,9 @@ Q
 +src/main/java/PageObjects/CategoryPage.java,a\2\a25eb101cbce28bcf6ecd334c62a00e1699996fa
 V
 &src/test/java/Tests/ContactUsTest.java,7\c\7cd5bc00c16b8e6798a84d5180f7f2a6fbc3328a
+P
+ src/main/java/Utils/Product.java,5\7\57bca6bc60d70abce7220da814ecd5a85ad9d92c
+M
+src/main/java/Utils/User.java,8\f\8f0c3efa0aba7893e7c1d28108f0615b41db880e
+Y
+)src/main/java/Utils/ClaimInformation.java,a\a\aab711edeccfd790b553242d5c10cb5b5b2f0a6e

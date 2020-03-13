@@ -1,6 +1,8 @@
 package Tests;
 
-import Drivers.DriverFactory;
+import Drivers.DriverManager;
+import Drivers.DriverManagerFactory;
+import Drivers.DriverType;
 import Utils.ConfigurationReader;
 import Utils.TestDataReader;
 import org.junit.jupiter.api.AfterEach;
@@ -14,29 +16,35 @@ import java.util.concurrent.TimeUnit;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BaseTest {
     protected WebDriver driver;
+    DriverManager driverManager;
+
     protected ConfigurationReader configuration;
     protected TestDataReader testData;
     private String testDataLocation = "src/test/java/TestData.properties";
     private String configurationLocation = "src/configs/Configuration.properties";
 
 
-    @BeforeAll
-    public void getConfiguration() {
-        configuration = new ConfigurationReader(configurationLocation);
+    private void getConfiguration() {
         testData = new TestDataReader(testDataLocation);
+        configuration = new ConfigurationReader(configurationLocation);
+    }
+
+    @BeforeAll
+    public void beforeTest() {
+        driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
+        getConfiguration();
     }
 
     @BeforeEach
     public void testSetUp() {
-        DriverFactory driverFactory = new DriverFactory();
-        driver = driverFactory.create(configuration);
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+        driver = driverManager.getDriver();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 
     @AfterEach
     public void closeDriver() {
-        driver.quit();
+        driverManager.quitDriver();
     }
 
 }

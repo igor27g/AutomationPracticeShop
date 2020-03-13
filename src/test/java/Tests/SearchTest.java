@@ -26,12 +26,8 @@ public class SearchTest extends BaseTest {
                 .AcceptTermsAndClickProcceedButton()
                 .payByBankWire()
                 .confirmMyOrder();
-
-        Assertions.assertAll("Checking order summary",
-                () -> Assertions.assertEquals(29.0, orderConfirmationPage.getTotalAmount(),
-                        "Total price of product is not what expected. Expected 29.0, but was..."),
-                () -> Assertions.assertEquals(1, productsAmount, "Quantity of the product is not what expected. Expected: 11, but was ")
-        );
+        Assertions.assertEquals(29.00, orderConfirmationPage.getTotalAmount(),
+                "Total price of product is not what expected. Expected 29.0, but was...");
     }
 
     @Test

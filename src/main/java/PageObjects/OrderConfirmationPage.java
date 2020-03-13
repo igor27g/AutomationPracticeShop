@@ -30,10 +30,11 @@ public class OrderConfirmationPage extends BasePage {
         return orderCompleteText;
     }
 
-    public Double getTotalAmount() {
+    public String getTotalAmount() {
         String price = wait.until(ExpectedConditions.visibilityOfElementLocated(priceAmount)).getText();
         String priceAfterConvert = price.substring(1,price.length()).trim();
-        return Double.parseDouble(priceAfterConvert);
+        return priceAfterConvert;
+//        return Double.parseDouble(priceAfterConvert);
     }
 
 

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: Tests.CartTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 46.356 s <<< FAILURE! - in Tests.CartTest
+addToCartFromHomePage  Time elapsed: 46.347 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=80.0.3987.132)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TADEUSZ', ip: '192.168.1.186', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '11.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.132, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\Tadeusz\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:63405}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 736f3bf4a9b3b103819c25953331399e
+*** Element info: {Using=css selector, value=button[class='exclusive']>span}
+	at Tests.CartTest.addToCartFromHomePage(CartTest.java:12)
+
